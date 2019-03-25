@@ -9,6 +9,71 @@ $color-blue: #039BE5;
 $color-indigo: #3F51B5;
 $color-violet: #AB47BC;
 
+$font-heading: "Playfair Display";
+$border-radius: 3px;
+
+@mixin heading-styles {
+    font-family: $font-heading;
+    font-weight: 300;
+    letter-spacing: 2.5px;
+}
+
+.btn-white {
+    text-decoration: none;
+    border: none;
+    color: $color-white;
+    border: 1px solid $color-white;
+    border-radius: $border-radius;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    outline-color: $color-white;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba($color-white, 0.2);
+    }
+    &:active {
+        background-color: $color-white;
+    }
+}
+.btn-blue {
+    text-decoration: none;
+    border: none;
+    color: $color-blue;
+    border: 1px solid $color-blue;
+    border-radius: $border-radius;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    outline-color: $color-blue;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba($color-blue, 0.2);
+    }
+    &:active {
+        background-color: $color-blue;
+    }
+}
+
+.btn-indigo {
+    text-decoration: none;
+    border: none;
+    color: $color-indigo;
+    border: 1px solid $color-indigo;
+    border-radius: $border-radius;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    outline-color: $color-indigo;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba($color-indigo, 0.2);
+    }
+    &:active {
+        background-color: $color-indigo;
+    }
+}
+
 
 * {
     margin: 0;
@@ -29,3 +94,58 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+
+.default {
+    font-size: 4.5rem;
+    text-align: center;
+    margin-top: 5rem;
+    
+    button { font-size: 2rem }
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    align-items: center;
+    background-color: rgba($color-indigo, 0.5);
+    box-shadow: 2px 1px 1px rgba(black, 0.5);
+
+    &__clearfix {
+        display: block;
+        width: 100vw;
+        height: 5rem;
+    }
+
+    &__title {
+        @include heading-styles;
+        font-size: 2.5rem;
+        color: $color-white;
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        a{
+            margin-left: 2rem;
+        }
+    }
+
+    &__searchbar {
+        background-color: $color-white;
+        border: none;
+        border-radius: 100px;
+        height: 2.5rem;
+        width: 20rem;
+        padding-left: 1rem;
+        outline: none;
+
+        &:focus {
+            box-shadow: 0 0 0 2.5px $color-blue;
+        }
+    }
+}
