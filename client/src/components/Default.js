@@ -6,7 +6,7 @@ class Default extends React.Component {
     render() {
         return (
             <div className="default" >
-                Sorry, but it looks like this page doesn't exit...
+                Sorry, but it looks like this page doesn't exist...
                 <br/>
                 <button 
                     className="btn-blue"
