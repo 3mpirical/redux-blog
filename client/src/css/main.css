@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  background-color: #212121;
+  color: #FAFAFA;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  font-family: "Lato", sans-serif; }

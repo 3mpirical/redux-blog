@@ -1,0 +1,31 @@
+
+$color-background: #212121;
+$color-white: #FAFAFA;
+$color-grey-dark: #424242;
+$color-grey: #757575;
+$color-grey-light: #BDBDBD;
+$color-green: #00ACC1;
+$color-blue: #039BE5;
+$color-indigo: #3F51B5;
+$color-violet: #AB47BC;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: $color-background;
+    color: $color-white;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    font-family: "Lato", sans-serif;
+}
+
