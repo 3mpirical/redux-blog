@@ -219,7 +219,7 @@ body {
 
     &__title {
         @include heading-styles;
-        border-bottom: 3px solid $color-white;
+        border-bottom: 3px solid $color-grey;
         padding: 0 0 2rem 1rem;
         margin: 2rem auto;
         width: 80%; 
@@ -240,7 +240,7 @@ body {
         margin: 6rem auto;
         padding: 2rem 0 0 2rem;
         font-size: 2rem;
-        border-top: 3px solid $color-white;
+        border-top: 3px solid $color-grey;
         width: 80%; 
         min-width: 50rem;
 
