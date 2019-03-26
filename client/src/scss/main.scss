@@ -94,6 +94,20 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+@keyframes spin{
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    animation: spin 1.3s infinite linear; 
+}
+
 
 .default {
     font-size: 4.5rem;
@@ -146,6 +160,102 @@ body {
 
         &:focus {
             box-shadow: 0 0 0 2.5px $color-blue;
+        }
+    }
+}
+
+
+.blogs-title {
+    @include heading-styles;
+    border-bottom: 3px solid $color-white;
+    padding: 0 0 2rem 1rem;
+    margin: 2rem auto 2rem 5%;
+    width: 40%; 
+    min-width: 50rem;
+    color: $color-green;
+
+}
+
+.blogs-container {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    min-width: 50rem;
+    margin: 1rem auto 0 5%;
+}
+
+.blog { 
+    text-decoration: none;
+    width: 100%;
+    padding: 3rem;
+    margin: 1rem 0;
+    border: 1px solid $color-blue;
+    border-radius: $border-radius;
+    background-color: rgba($color-blue, 0.05);
+    color: $color-blue;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition-duration: 0.5s;
+
+    &:hover {
+        background-color: lighten($color-blue, 10%);
+        color: $color-white;
+        transform: scaleY(1.1);
+    }
+
+    &:active {
+        background-color: $color-white;
+    }
+}
+
+.blog-show {
+    &__image {
+        width: 100vw;
+        height: 20rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__title {
+        @include heading-styles;
+        border-bottom: 3px solid $color-white;
+        padding: 0 0 2rem 1rem;
+        margin: 2rem auto;
+        width: 80%; 
+        min-width: 50rem;
+        color: $color-green;
+    }
+    
+    &__text {
+        width: 75%;
+        margin: 2rem auto;
+        font-size: 2rem;
+        line-height: 40px;
+    }
+    &__meta {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 6rem auto;
+        padding: 2rem 0 0 2rem;
+        font-size: 2rem;
+        border-top: 3px solid $color-white;
+        width: 80%; 
+        min-width: 50rem;
+
+        img {
+            height: 10rem;
+            border-radius: $border-radius;
+            margin-right: 1rem;
+        }
+        .author {
+            color: $color-green;
+            cursor: pointer;
+
+            &:hover {
+                color: $color-violet;
+            }
         }
     }
 }

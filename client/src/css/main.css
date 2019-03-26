@@ -59,6 +59,15 @@ body {
   letter-spacing: 1px;
   font-family: "Lato", sans-serif; }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+.spinner {
+  animation: spin 1.3s infinite linear; }
+
 .default {
   font-size: 4.5rem;
   text-align: center;
@@ -102,3 +111,84 @@ body {
     outline: none; }
     .navbar__searchbar:focus {
       box-shadow: 0 0 0 2.5px #039BE5; }
+
+.blogs-title {
+  font-family: "Playfair Display";
+  font-weight: 300;
+  letter-spacing: 2.5px;
+  border-bottom: 3px solid #FAFAFA;
+  padding: 0 0 2rem 1rem;
+  margin: 2rem auto 2rem 5%;
+  width: 40%;
+  min-width: 50rem;
+  color: #00ACC1; }
+
+.blogs-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  min-width: 50rem;
+  margin: 1rem auto 0 5%; }
+
+.blog {
+  text-decoration: none;
+  width: 100%;
+  padding: 3rem;
+  margin: 1rem 0;
+  border: 1px solid #039BE5;
+  border-radius: 3px;
+  background-color: rgba(3, 155, 229, 0.05);
+  color: #039BE5;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition-duration: 0.5s; }
+  .blog:hover {
+    background-color: #1fb4fc;
+    color: #FAFAFA;
+    transform: scaleY(1.1); }
+  .blog:active {
+    background-color: #FAFAFA; }
+
+.blog-show__image {
+  width: 100vw;
+  height: 20rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.blog-show__title {
+  font-family: "Playfair Display";
+  font-weight: 300;
+  letter-spacing: 2.5px;
+  border-bottom: 3px solid #FAFAFA;
+  padding: 0 0 2rem 1rem;
+  margin: 2rem auto;
+  width: 80%;
+  min-width: 50rem;
+  color: #00ACC1; }
+
+.blog-show__text {
+  width: 75%;
+  margin: 2rem auto;
+  font-size: 2rem;
+  line-height: 40px; }
+
+.blog-show__meta {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 6rem auto;
+  padding: 2rem 0 0 2rem;
+  font-size: 2rem;
+  border-top: 3px solid #FAFAFA;
+  width: 80%;
+  min-width: 50rem; }
+  .blog-show__meta img {
+    height: 10rem;
+    border-radius: 3px;
+    margin-right: 1rem; }
+  .blog-show__meta .author {
+    color: #00ACC1;
+    cursor: pointer; }
+    .blog-show__meta .author:hover {
+      color: #AB47BC; }

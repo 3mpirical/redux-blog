@@ -9,7 +9,7 @@ for i in (1..20)
         category: "Miscellaneous",
         text: Faker::Lorem.paragraph_by_chars(500, false),
         author_image: Faker::Avatar.image(),
-        banner: Faker::LoremFlickr.image("600x200", ["cool#{rand(0..20)}"]),
+        banner: Faker::LoremFlickr.image("1500x500", ["cool#{rand(0..20)}"]),
     )
 end
 
